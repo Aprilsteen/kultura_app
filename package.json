@@ -14,6 +14,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@havesource/cordova-plugin-push": "^5.0.5",
+    "cordova-android": "^14.0.1",
     "cordova-ios": "~3.9.1",
     "cordova-plugin-advanced-http": "^3.3.1",
     "cordova-plugin-device": "^2.1.0",
@@ -30,6 +31,8 @@
   },
   "cordova": {
     "platforms": [
+      "ios",
+      "android"
     ],
     "plugins": {
       "cordova-plugin-advanced-http": {
@@ -44,5 +47,6 @@
       "cordova-plugin-splashscreen": {},
       "@havesource/cordova-plugin-push": {}
     }
-  }
+  },
+  "dependencies": {}
 }
