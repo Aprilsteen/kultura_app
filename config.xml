@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.cliniccomplex.app" version="1.5.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>Клиники СМТ</name>
+<widget id="com.kultura.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Культура Дома</name>
     <icon src="res/images/icons/logo.png" />
-    <description>Личный кабинет СМТ</description>
-    <author email="cmtmedapplest@gmail.com">
-        Клиники СМТ
+    <description>Культура дома - уникальные товары для дома</description>
+    <author email="info@td-kd.ru">
+        Культура Дома
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -24,7 +24,6 @@
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:icon="@mipmap/icon" android:roundIcon="@mipmap/icon_round" />
         </edit-config>
-        <resource-file src="res/google-services.json" target="app/google-services.json" />
     </platform>
 
     <platform name="ios">
@@ -35,7 +34,6 @@
             <param name="ios-package" value="CDVWKWebViewEngine" />
         </feature>
         <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
-        <resource-file src="res/GoogleService-Info.plist" />
     </platform>
     <engine name="ios" spec="~3.9.1" />
 

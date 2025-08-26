@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cmt-app.iml" filepath="$PROJECT_DIR$/.idea/cmt-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kultura-app.iml" filepath="$PROJECT_DIR$/.idea/kultura-app.iml" />
     </modules>
   </component>
 </project>

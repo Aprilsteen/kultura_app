@@ -1,8 +1,8 @@
 {
-  "name": "com.cordova.cmt",
-  "displayName": "cmt",
-  "version": "1.5.1",
-  "description": "Клиники СМТ",
+  "name": "com.cordova.kultura",
+  "displayName": "kultura",
+  "version": "1.0.0",
+  "description": "Культура Дома",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "keywords": [
     "ecosystem:cordova"
   ],
-  "author": "SMT",
+  "author": "KulturaDoma",
   "license": "Apache-2.0",
   "devDependencies": {
     "@havesource/cordova-plugin-push": "^5.0.5",
@@ -30,7 +30,6 @@
   },
   "cordova": {
     "platforms": [
-      "ios"
     ],
     "plugins": {
       "cordova-plugin-advanced-http": {

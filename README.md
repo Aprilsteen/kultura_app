@@ -1,1 +1,1 @@
-# smt_app
+# kultura_app
