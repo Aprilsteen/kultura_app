@@ -5,3 +5,9 @@ body.mode-online {
 .nav__box1, .nav__box2 {
     opacity: 0;
 }
+header {
+    background: #3d4f57;
+}
+.footer__rules {
+    text-align: center;
+}
