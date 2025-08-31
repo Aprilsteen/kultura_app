@@ -9,7 +9,6 @@ function onResume() {
     resumed = true
 }
 
-
 let errorWithFirstConnectOrOpenUrl = () => {
     document.body.className = 'mode-offline';
 
@@ -30,7 +29,7 @@ let openAppWindow = () => {
             document.body.className = 'mode-online';
 
             const options = 'location=no,toolbar=no,hideurlbar=yes,hidenavigationbuttons=yes,lefttoright=yes,zoom=no';
-            siteWindow = cordova.InAppBrowser.open('https://kultura-doma.ru/?source=app&version=1.0.0&version_app=android', '_blank', options)
+            siteWindow = cordova.InAppBrowser.open('https://kultura.potok8.ru/?source=app&version=1.0.0&version_app=android', '_blank', options)
 
             siteWindow.addEventListener('loaderror', function (params) {
                 console.log('ERROR', params.message)
@@ -43,7 +42,6 @@ let openAppWindow = () => {
                 if (payloadWait !== '') {
                     let tmp = payloadWait
                     payloadWait = ''
-
                     /*siteWindow.executeScript({
                             code: "loadPushId('" + tmp + "')"
                         }
