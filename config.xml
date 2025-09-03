@@ -24,6 +24,7 @@
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:icon="@mipmap/icon" android:roundIcon="@mipmap/icon_round" />
         </edit-config>
+        <resource-file src="res/google-services.json" target="app/google-services.json"/>
     </platform>
 
     <platform name="ios">
@@ -34,6 +35,7 @@
             <param name="ios-package" value="CDVWKWebViewEngine" />
         </feature>
         <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+        <resource-file src="res/GoogleService-Info.plist"/>
     </platform>
     <engine name="ios" spec="~3.9.1" />
 
