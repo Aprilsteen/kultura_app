@@ -11,29 +11,20 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-    <feature name="Fingerprint">
-        <param name="android-package" value="de.niklasmerz.cordova.biometric.Fingerprint" />
-    </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-        <param name="onload" value="true" />
-    </feature>
     <feature name="StatusBar">
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="PushNotification">
-        <param name="android-package" value="com.adobe.phonegap.push.PushPlugin" />
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
     </feature>
-    <platform name="android">
-        <preference name="AndroidXEnabled" value="true" />
-    </platform>
     <name>Культура Дома</name>
     <icon src="res/images/icons/logo.png" />
     <description>Культура дома - уникальные товары для дома</description>
@@ -54,10 +45,6 @@
     </edit-config>
     <resource-file src="res/google-services.json" target="app/google-services.json" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="GradlePluginGoogleServicesEnabled" value="true" />
-    <preference name="GradlePluginGoogleServicesVersion" value="4.3.15" />
-    <preference name="GradlePluginKotlinEnabled" value="true" />
-    <preference name="GradlePluginKotlinVersion" value="1.7.21" />
     <preference name="LoadUrlTimeoutValue" value="700000" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />

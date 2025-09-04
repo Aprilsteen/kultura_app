@@ -263,14 +263,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-fingerprint-aio.Fingerprint",
-      "file": "plugins/cordova-plugin-fingerprint-aio/www/Fingerprint.js",
-      "pluginId": "cordova-plugin-fingerprint-aio",
-      "clobbers": [
-        "Fingerprint"
-      ]
-    },
-    {
       "id": "cordova-plugin-inappbrowser.inappbrowser",
       "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
       "pluginId": "cordova-plugin-inappbrowser",
@@ -295,14 +287,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-splashscreen.SplashScreen",
-      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-      "pluginId": "cordova-plugin-splashscreen",
-      "clobbers": [
-        "navigator.splashscreen"
-      ]
-    },
-    {
       "id": "cordova-plugin-statusbar.statusbar",
       "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
       "pluginId": "cordova-plugin-statusbar",
@@ -311,23 +295,21 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "@havesource/cordova-plugin-push.PushNotification",
-      "file": "plugins/@havesource/cordova-plugin-push/www/push.js",
-      "pluginId": "@havesource/cordova-plugin-push",
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
       "clobbers": [
-        "PushNotification"
+        "navigator.splashscreen"
       ]
     }
   ];
   module.exports.metadata = {
-    "cordova-plugin-file": "8.0.0",
+    "cordova-plugin-file": "8.1.3",
     "cordova-plugin-advanced-http": "3.3.1",
     "cordova-plugin-device": "2.1.0",
-    "cordova-plugin-fingerprint-aio": "5.0.1",
     "cordova-plugin-inappbrowser": "5.0.0",
     "cordova-plugin-network-information": "3.0.0",
-    "cordova-plugin-splashscreen": "6.0.1",
     "cordova-plugin-statusbar": "3.0.0",
-    "@havesource/cordova-plugin-push": "5.0.5"
+    "cordova-plugin-splashscreen": "6.0.1"
   };
 });

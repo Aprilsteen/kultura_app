@@ -44,19 +44,11 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"Fingerprint\"><param name=\"android-package\" value=\"de.niklasmerz.cordova.biometric.Fingerprint\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
               "count": 1
             },
             {
               "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
             {
@@ -68,7 +60,7 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
+              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             }
           ]
@@ -79,40 +71,6 @@
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 2
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 2
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.POST_NOTIFICATIONS\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"${applicationId}.permission.PushHandlerActivity\" />",
-              "count": 1
-            },
-            {
-              "xml": "<permission android:name=\"${applicationId}.permission.PushHandlerActivity\" android:protectionLevel=\"signature\" />",
-              "count": 1
-            }
-          ],
-          "/*": [
-            {
-              "xml": "<uses-permission android:name=\"android.permission.USE_BIOMETRIC\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.USE_FINGERPRINT\" />",
               "count": 1
             },
             {
@@ -120,61 +78,9 @@
               "count": 1
             }
           ],
-          "application": [
-            {
-              "xml": "<activity android:exported=\"false\" android:name=\"de.niklasmerz.cordova.biometric.BiometricActivity\" android:theme=\"@style/TransparentTheme\" />",
-              "count": 1
-            }
-          ],
-          "/manifest/application": [
-            {
-              "xml": "<activity android:exported=\"true\" android:name=\"com.adobe.phonegap.push.PushHandlerActivity\" android:permission=\"${applicationId}.permission.PushHandlerActivity\" />",
-              "count": 1
-            },
-            {
-              "xml": "<activity android:exported=\"true\" android:name=\"com.adobe.phonegap.push.BackgroundHandlerActivity\" android:permission=\"${applicationId}.permission.BackgroundHandlerActivity\"><intent-filter><action android:name=\"com.adobe.phonegap.push.background.MESSAGING_EVENT\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
-              "count": 1
-            },
-            {
-              "xml": "<receiver android:name=\"com.adobe.phonegap.push.BackgroundActionButtonHandler\" />",
-              "count": 1
-            },
-            {
-              "xml": "<receiver android:name=\"com.adobe.phonegap.push.PushDismissedHandler\" />",
-              "count": 1
-            },
-            {
-              "xml": "<service android:exported=\"true\" android:name=\"com.adobe.phonegap.push.FCMService\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
-              "count": 1
-            }
-          ]
-        }
-      },
-      "config.xml": {
-        "parents": {
           "/*": [
             {
-              "xml": "<platform name=\"android\"><preference name=\"AndroidXEnabled\" value=\"true\" /></platform>",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"AndroidXEnabled\" value=\"true\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"GradlePluginGoogleServicesEnabled\" value=\"true\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"GradlePluginGoogleServicesVersion\" value=\"4.3.15\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"GradlePluginKotlinEnabled\" value=\"true\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"GradlePluginKotlinVersion\" value=\"1.7.21\" />",
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
               "count": 1
             }
           ]
@@ -195,24 +101,16 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.kultura.app"
     },
-    "cordova-plugin-fingerprint-aio": {
-      "PACKAGE_NAME": "com.kultura.app"
-    },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.kultura.app"
     },
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "com.kultura.app"
     },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.kultura.app"
-    },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.kultura.app"
     },
-    "@havesource/cordova-plugin-push": {
-      "ANDROIDX_CORE_VERSION": "1.6.+",
-      "FCM_VERSION": "23.+",
+    "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.kultura.app"
     }
   },
@@ -481,14 +379,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-fingerprint-aio.Fingerprint",
-      "file": "plugins/cordova-plugin-fingerprint-aio/www/Fingerprint.js",
-      "pluginId": "cordova-plugin-fingerprint-aio",
-      "clobbers": [
-        "Fingerprint"
-      ]
-    },
-    {
       "id": "cordova-plugin-inappbrowser.inappbrowser",
       "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
       "pluginId": "cordova-plugin-inappbrowser",
@@ -513,14 +403,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-splashscreen.SplashScreen",
-      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-      "pluginId": "cordova-plugin-splashscreen",
-      "clobbers": [
-        "navigator.splashscreen"
-      ]
-    },
-    {
       "id": "cordova-plugin-statusbar.statusbar",
       "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
       "pluginId": "cordova-plugin-statusbar",
@@ -529,23 +411,21 @@
       ]
     },
     {
-      "id": "@havesource/cordova-plugin-push.PushNotification",
-      "file": "plugins/@havesource/cordova-plugin-push/www/push.js",
-      "pluginId": "@havesource/cordova-plugin-push",
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
       "clobbers": [
-        "PushNotification"
+        "navigator.splashscreen"
       ]
     }
   ],
   "plugin_metadata": {
-    "cordova-plugin-file": "8.0.0",
+    "cordova-plugin-file": "8.1.3",
     "cordova-plugin-advanced-http": "3.3.1",
     "cordova-plugin-device": "2.1.0",
-    "cordova-plugin-fingerprint-aio": "5.0.1",
     "cordova-plugin-inappbrowser": "5.0.0",
     "cordova-plugin-network-information": "3.0.0",
-    "cordova-plugin-splashscreen": "6.0.1",
     "cordova-plugin-statusbar": "3.0.0",
-    "@havesource/cordova-plugin-push": "5.0.5"
+    "cordova-plugin-splashscreen": "6.0.1"
   }
 }

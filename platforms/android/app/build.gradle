@@ -113,7 +113,6 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-fingerprint-aio/app-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -327,9 +326,6 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
     implementation "androidx.webkit:webkit:1.4.0"
-    implementation "androidx.core:core:1.6.+"
-    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
-    implementation "com.google.firebase:firebase-messaging:23.+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
