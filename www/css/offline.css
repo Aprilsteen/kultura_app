@@ -37,7 +37,6 @@
 html, body {
     margin: 0;
     height: 100%;
-    min-height: 100%;
     font-family: "Geologica", sans-serif;
     color: #1D1D1F;
     background: #3D4F57;
