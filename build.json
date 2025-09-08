@@ -2,17 +2,17 @@
     "android": {
         "debug": {
             "keystore": "key.jks",
-            "storePassword": "372915",
-            "alias": "key_alias",
-            "password" : "372915",
+            "storePassword": "pLV7ayXjOjpmeh",
+            "alias": "key",
+            "password" : "pLV7ayXjOjpmeh",
             "keystoreType": "jks",
             "packageType": "apk"
         },
         "release": {
             "keystore": "key.jks",
-            "storePassword": "372915",
-            "alias": "key_alias",
-            "password" : "372915",
+            "storePassword": "pLV7ayXjOjpmeh",
+            "alias": "key",
+            "password" : "pLV7ayXjOjpmeh",
             "keystoreType": "jks",
             "packageType": "bundle"
         }
