@@ -1,7 +1,7 @@
 {
   "name": "com.kultura.app",
   "displayName": "kultura",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Культура дома",
   "main": "index.js",
   "scripts": {
