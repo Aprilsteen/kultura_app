@@ -24,13 +24,13 @@
             <application android:icon="@mipmap/icon" android:roundIcon="@mipmap/icon_round" />
         </edit-config>
         <resource-file src="res/google-services.json" target="app/google-services.json" />
-        <config-file target="AndroidManifest.xml" parent="/manifest">
+        <config-file parent="/manifest" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.RECORD_AUDIO" />
             <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
         </config-file>
         <preference name="AndroidPersistentFileModeEnabled" value="false" />
     </platform>
-    <platform name="ios">  
+    <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="WKWebViewOnly" value="true" />
@@ -42,11 +42,10 @@
         <preference name="MediaPlaybackAllowsInline" value="true" />
         <preference name="MediaPlaybackRequiresUserAction" value="true" />
         <resource-file src="res/GoogleService-Info.plist" />
-        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
-           <string>Нужен доступ к микрофону для записи голосовых сообщений в чате</string>
-       </config-file>
+        <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+            <string>Нужен доступ к микрофону для записи голосовых сообщений в чате</string>
+        </config-file>
     </platform>
-    <engine name="ios" spec="~3.9.1" />
     <platform name="browser">
         <preference name="AutoHideSplashScreen" value="true" />
     </platform>
