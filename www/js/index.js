@@ -28,8 +28,9 @@ let openAppWindow = () => {
         if (navigator.onLine/* && navigator.connection.type !== Connection.CELL_2G*/) {
             document.body.className = 'mode-online';
 
+            //const options = 'location=no,toolbar=no,hideurlbar=yes,hidenavigationbuttons=yes,lefttoright=yes,zoom=no,mediaPlaybackRequiresUserAction=no,shouldPauseOnSuspend=no';
             const options = 'location=no,toolbar=no,hideurlbar=yes,hidenavigationbuttons=yes,lefttoright=yes,zoom=no';
-            siteWindow = cordova.InAppBrowser.open('https://kultura-doma.ru/?source=app&version=1.0.2&version_app=android', '_blank', options)
+            siteWindow = cordova.InAppBrowser.open('https://kultura-doma.ru/?source=app&version=1.0.3&version_app=android', '_blank', options)
 
             siteWindow.addEventListener('loaderror', function (params) {
                 console.log('ERROR', params.message)
@@ -88,5 +89,5 @@ document.addEventListener("online", () => {
 
 function onDeviceReady() {
     document.body.className = 'mode-online';
-    openAppWindow()
+    openAppWindow();
 }
