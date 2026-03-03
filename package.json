@@ -13,6 +13,7 @@
   "author": "KulturaDoma",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cordova-android": "^14.0.1",
     "cordova-plugin-advanced-http": "^3.3.1",
     "cordova-plugin-android-permissions": "^1.1.5",
     "cordova-plugin-device": "^2.1.0",
@@ -26,7 +27,9 @@
     "phonegap-plugin-multidex": "~1.0.0"
   },
   "cordova": {
-    "platforms": [],
+    "platforms": [
+      "android"
+    ],
     "plugins": {
       "cordova-plugin-advanced-http": {
         "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
