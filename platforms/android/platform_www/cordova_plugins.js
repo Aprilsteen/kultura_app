@@ -263,14 +263,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-inappbrowser.inappbrowser",
-      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-      "pluginId": "cordova-plugin-inappbrowser",
-      "clobbers": [
-        "cordova.InAppBrowser.open"
-      ]
-    },
-    {
       "id": "cordova-plugin-network-information.network",
       "file": "plugins/cordova-plugin-network-information/www/network.js",
       "pluginId": "cordova-plugin-network-information",
@@ -325,17 +317,25 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.plugins.permissions"
       ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open"
+      ]
     }
   ];
   module.exports.metadata = {
     "cordova-plugin-file": "8.1.3",
     "cordova-plugin-advanced-http": "3.3.1",
     "cordova-plugin-device": "2.1.0",
-    "cordova-plugin-inappbrowser": "5.0.0",
     "cordova-plugin-network-information": "3.0.0",
     "cordova-plugin-statusbar": "3.0.0",
     "cordova-plugin-splashscreen": "6.0.1",
     "cordova-plugin-media": "7.0.0",
-    "cordova-plugin-android-permissions": "1.1.5"
+    "cordova-plugin-android-permissions": "1.1.5",
+    "cordova-plugin-inappbrowser": "6.0.0"
   };
 });

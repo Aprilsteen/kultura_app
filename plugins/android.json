@@ -15,9 +15,6 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.kultura.app"
     },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.kultura.app"
-    },
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "com.kultura.app"
     },
@@ -35,6 +32,9 @@
       "PACKAGE_NAME": "com.kultura.app"
     },
     "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.kultura.app"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.kultura.app"
     }
   },

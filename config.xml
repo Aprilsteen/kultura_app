@@ -30,6 +30,8 @@
         </config-file>
         <preference name="AndroidPersistentFileLocation" value="Compatibility" />
         <preference name="AndroidPersistentFileModeEnabled" value="false" />
+        <preference name="EnableViewportScale" value="true" />
+        <preference name="android-windowSoftInputMode" value="adjustPan" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -46,6 +48,7 @@
         <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
             <string>Приложению нужен доступ к микрофону для записи голосовых сообщений в чате</string>
         </config-file>
+        <preference name="EnableViewportScale" value="true" />
     </platform>
     <platform name="browser">
         <preference name="AutoHideSplashScreen" value="true" />
