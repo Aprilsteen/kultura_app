@@ -17,7 +17,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="AndroidXEnabled" value="true" />
-        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/images/icons/logo.png" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/images/icons/splash-screen.png" />
         <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
         <preference name="AndroidInsecureFileModeEnabled" value="true" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
@@ -58,7 +58,7 @@
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="StatusBarBackgroundColor" value="#fff" />
     <preference name="ShowSplashScreen" value="false" />
-    <preference name="SplashScreenDelay" value="500" />
+    <preference name="SplashScreenDelay" value="400" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreenBackgroundColor" value="#fff" />
