@@ -42,6 +42,7 @@
         </feature>
         <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
         <preference name="AllowInlineMediaPlayback" value="true" />
+        <preference name="allowsInlineMediaPlayback" value="true" />
         <preference name="MediaPlaybackAllowsInline" value="true" />
         <preference name="MediaPlaybackRequiresUserAction" value="true" />
         <resource-file src="res/GoogleService-Info.plist" />
