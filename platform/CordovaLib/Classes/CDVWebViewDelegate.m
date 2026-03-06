@@ -103,6 +103,19 @@ static NSString *stripFragment(NSString* url)
 
 @implementation CDVWebViewDelegate
 
+
+// Разрешаем доступ к микрофону для InAppBrowser на iOS 15+
+- (void)webView:(WKWebView *)webView
+    requestMediaCapturePermissionForOrigin:(WKSecurityOrigin *)origin
+                         initiatedByFrame:(WKFrameInfo *)frame
+                                      type:(WKMediaCaptureType)type
+                           decisionHandler:(void (^)(WKPermissionDecision))decisionHandler
+                           API_AVAILABLE(ios(15.0)) {
+
+    decisionHandler(WKPermissionDecisionGrant);
+}
+
+
 - (id)initWithDelegate:(NSObject <UIWebViewDelegate>*)delegate
 {
     self = [super init];

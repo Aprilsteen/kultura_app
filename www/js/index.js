@@ -95,43 +95,43 @@ function onDeviceReady() {
 
 function onDeviceReady() {
     document.body.className = 'mode-online';
-    
-    // Сначала запрашиваем разрешение на микрофон
-    requestMicrophonePermission()
-        .then(() => {
-            console.log('✅ Разрешение получено, открываем сайт');
-            openAppWindow();
-        })
-        .catch((err) => {
-            console.warn('Нет разрешения на микрофон:', err);
-            // Всё равно открываем сайт, но микрофон работать не будет
-            openAppWindow();
-        });
+
+    if (cordova.platformId === 'ios') {
+        openAppWindow();
+    }
+    else {
+        // Сначала запрашиваем разрешение на микрофон
+        requestMicrophonePermission()
+            .then(() => {
+                console.log('✅ Разрешение получено, открываем сайт');
+                openAppWindow();
+            })
+            .catch((err) => {
+                console.warn('Нет разрешения на микрофон:', err);
+                // Всё равно открываем сайт, но микрофон работать не будет
+                openAppWindow();
+            });
+    }
 }
 
 function requestMicrophonePermission() {
     return new Promise((resolve, reject) => {
-        if (cordova.platformId === 'android') {
-            var permissions = cordova.plugins.permissions;
-            permissions.requestPermission(
-                permissions.RECORD_AUDIO,
-                function(status) {
-                    if (status.hasPermission) {
-                        console.log('Микрофон разрешён пользователем');
-                        resolve(true);
-                    } else {
-                        console.log('Пользователь отклонил микрофон');
-                        reject(new Error('Permission denied'));
-                    }
-                },
-                function(error) {
-                    console.error('Ошибка запроса разрешения:', error);
-                    reject(error);
+        var permissions = cordova.plugins.permissions;
+        permissions.requestPermission(
+            permissions.RECORD_AUDIO,
+            function(status) {
+                if (status.hasPermission) {
+                    console.log('Микрофон разрешён пользователем');
+                    resolve(true);
+                } else {
+                    console.log('Пользователь отклонил микрофон');
+                    reject(new Error('Permission denied'));
                 }
-            );
-        } else {
-            // На iOS разрешение запросится автоматически при вызове getUserMedia
-            resolve(true);
-        }
+            },
+            function(error) {
+                console.error('Ошибка запроса разрешения:', error);
+                reject(error);
+            }
+        );
     });
 }
