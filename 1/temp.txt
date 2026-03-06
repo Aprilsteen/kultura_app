@@ -7,3 +7,17 @@ Java JDK: installed 17.0.10
 Android SDK: installed true
 Android target: installed android-36,android-35,android-34,android-33
 Gradle: installed C:\Program Files\Gradle\gradle-9.0.0\bin\gradle.BAT
+
+
+
+
+- (void)webView:(WKWebView *)webView
+    requestMediaCapturePermissionForOrigin:(WKSecurityOrigin *)origin
+                         initiatedByFrame:(WKFrameInfo *)frame
+                                      type:(WKMediaCaptureType)type
+                           decisionHandler:(void (^)(WKPermissionDecision))decisionHandler
+                           API_AVAILABLE(ios(15.0)) {
+
+    // Просто разрешаем доступ к микрофону
+    decisionHandler(WKPermissionDecisionGrant);
+}
