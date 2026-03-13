@@ -1,8 +1,8 @@
 {
   "name": "com.kultura.app",
   "displayName": "kultura",
-  "version": "1.0.3",
-  "description": "Культура дома",
+  "version": "1.0.4",
+  "description": "Культура Дома",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,11 +14,10 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^14.0.1",
+    "cordova-ios": "~3.9.1",
     "cordova-plugin-advanced-http": "^3.3.1",
-    "cordova-plugin-android-permissions": "^1.1.5",
     "cordova-plugin-device": "^2.1.0",
-    "cordova-plugin-inappbrowser": "^6.0.0",
-    "cordova-plugin-media": "^7.0.0",
+    "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-push": "^0.0.1",
     "cordova-plugin-push-notification": "^2.5.2",
@@ -28,6 +27,7 @@
   },
   "cordova": {
     "platforms": [
+      "ios",
       "android"
     ],
     "plugins": {
@@ -35,13 +35,11 @@
         "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
       },
       "cordova-plugin-device": {},
+      "cordova-plugin-inappbrowser": {},
       "cordova-plugin-network-information": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-file": {},
-      "cordova-plugin-media": {},
-      "cordova-plugin-android-permissions": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-file": {}
     }
   },
   "dependencies": {
