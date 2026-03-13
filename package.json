@@ -2,7 +2,7 @@
   "name": "com.kultura.app",
   "displayName": "kultura",
   "version": "1.0.4",
-  "description": "Культура Дома",
+  "description": "Культура дома",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^14.0.1",
-    "cordova-ios": "^3.9.2",
+    "cordova-ios": "~3.9.1",
     "cordova-plugin-advanced-http": "^3.3.1",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-inappbrowser": "^5.0.0",
@@ -27,7 +27,8 @@
   },
   "cordova": {
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ],
     "plugins": {
       "cordova-plugin-advanced-http": {
