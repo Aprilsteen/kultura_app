@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.kultura.app" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.kultura.app" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Культура дома</name>
-    <icon src="res/images/icons/logo.png" />
+    <!--<icon src="res/images/icons/logo.png" />-->
     <description>Культура дома - уникальные товары для дома</description>
     <author email="info@td-kd.ru">
         Культура дома
@@ -14,6 +14,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="AndroidXEnabled" value="true" />
@@ -44,12 +46,36 @@
         <preference name="AllowInlineMediaPlayback" value="true" />
         <preference name="allowsInlineMediaPlayback" value="true" />
         <preference name="MediaPlaybackAllowsInline" value="true" />
-        <preference name="MediaPlaybackRequiresUserAction" value="true" />
+        <preference name="MediaTypesRequiringUserActionForPlayback" value="all" />
         <resource-file src="res/GoogleService-Info.plist" />
         <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
             <string>Приложению нужен доступ к микрофону для записи голосовых сообщений в чате</string>
         </config-file>
         <preference name="EnableViewportScale" value="true" />
+        <preference name="AllowNewWindows" value="true" />
+        <preference name="AutoHideSplashScreen" value="true" />
+        <preference name="AllowsAirPlayForMediaPlayback" value="true" />
+        <allow-navigation href="https://kultura-doma.ru/*" />
+        <edit-config target="NSAppTransportSecurity" file="*-Info.plist" mode="merge">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+                <key>NSAllowsArbitraryLoadsInWebContent</key>
+                <true/>
+                <key>NSAllowsLocalNetworking</key>
+                <true/>
+            </dict>
+        </edit-config>
+        <preference name="LimitsNavigationsToAppBoundDomains" value="false" />
+        <edit-config target="WKAppBoundDomains" file="*-Info.plist" mode="merge">
+            <array>
+                <string>kultura-doma.ru</string>
+            </array>
+        </edit-config>
+        <preference name="PreferredContentMode" value="mobile" />
+        <preference name="AllowUntrustedCerts" value="true" />
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="InspectableWebview" value="false" />
     </platform>
     <platform name="browser">
         <preference name="AutoHideSplashScreen" value="true" />
