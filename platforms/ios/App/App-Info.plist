@@ -52,5 +52,9 @@
 	</dict>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Приложению нужен доступ к микрофону для записи голосовых сообщений в чате</string>
+	<key>WKAppBoundDomains</key>
+	<array>
+		<string>kultura-doma.ru</string>
+	</array>
 </dict>
 </plist>

@@ -15,10 +15,18 @@
               "id": "config.xml"
             }
           ],
+          "WKAppBoundDomains": [
+            {
+              "xml": "<array><string>kultura-doma.ru</string></array>",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml"
+            }
+          ],
           "NSMicrophoneUsageDescription": [
             {
               "xml": "<string>Приложению нужен доступ к микрофону для записи голосовых сообщений в чате</string>",
-              "count": 8
+              "count": 5
             }
           ]
         }

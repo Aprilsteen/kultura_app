@@ -111,6 +111,4 @@
     <preference name="PreferredContentMode" value="mobile" />
     <preference name="AllowUntrustedCerts" value="true" />
     <preference name="InspectableWebview" value="false" />
-    <preference name="deployment-target" value="15.0" />
-    <preference name="InAppBrowserStatusBarStyle" value="lightcontent" />
 </widget>

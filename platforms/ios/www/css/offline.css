@@ -41,6 +41,9 @@ html, body {
     color: #1D1D1F;
     background: #3D4F57;
 }
+body, html {
+    background-color: transparent !important;
+}
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -200,19 +203,4 @@ header {
     .offline-img img, .footer-decor {
         width: auto;
     }
-}
-
-/* Скрываем весь интерфейс приложения при загрузке сайта */
-body.site-loaded .wrapper-offline,
-body.site-loaded header,
-body.site-loaded footer,
-body.site-loaded .offline {
-    display: none !important;
-}
-
-/* Сам сайт занимает весь экран */
-body.site-loaded {
-    background: transparent;
-    padding: 0;
-    margin: 0;
 }

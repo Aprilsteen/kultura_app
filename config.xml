@@ -55,7 +55,6 @@
         <preference name="AllowNewWindows" value="true" />
         <preference name="AutoHideSplashScreen" value="true" />
         <preference name="AllowsAirPlayForMediaPlayback" value="true" />
-        <allow-navigation href="https://kultura-doma.ru/*" />
         <edit-config target="NSAppTransportSecurity" file="*-Info.plist" mode="merge">
             <dict>
                 <key>NSAllowsArbitraryLoads</key>
@@ -67,15 +66,9 @@
             </dict>
         </edit-config>
         <preference name="LimitsNavigationsToAppBoundDomains" value="false" />
-        <edit-config target="WKAppBoundDomains" file="*-Info.plist" mode="merge">
-            <array>
-                <string>kultura-doma.ru</string>
-            </array>
-        </edit-config>
         <preference name="PreferredContentMode" value="mobile" />
         <preference name="AllowUntrustedCerts" value="true" />
         <preference name="InspectableWebview" value="false" />
-        <preference name="deployment-target" value="15.0" />
     </platform>
     <platform name="browser">
         <preference name="AutoHideSplashScreen" value="true" />
