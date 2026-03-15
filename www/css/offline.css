@@ -41,6 +41,9 @@ html, body {
     color: #1D1D1F;
     background: #3D4F57;
 }
+body, html {
+    background-color: transparent !important;
+}
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;

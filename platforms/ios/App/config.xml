@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.kultura.app" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="CDVWebViewEngine">
+        <param name="ios-package" value="CDVWebViewEngine" />
+    </feature>
+    <feature name="LaunchScreen">
+        <param name="ios-package" value="CDVLaunchScreen" />
+    </feature>
+    <feature name="LocalStorage">
+        <param name="ios-package" value="CDVLocalStorage" />
+    </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="HandleOpenUrl">
+        <param name="ios-package" value="CDVHandleOpenURL" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="IntentAndNavigationFilter">
+        <param name="ios-package" value="CDVIntentAndNavigationFilter" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="GestureHandler">
+        <param name="ios-package" value="CDVGestureHandler" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBarInternal">
+        <param name="ios-package" value="CDVStatusBarInternal" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Media">
+        <param name="ios-package" value="CDVSound" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVWKInAppBrowser" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Capture">
+        <param name="ios-package" value="CDVCapture" />
+    </feature>
+    <name>Культура дома</name>
+    <description>Культура дома - уникальные товары для дома</description>
+    <author email="info@td-kd.ru">
+        Культура дома
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <resource-file src="res/GoogleService-Info.plist" />
+    <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+        <string>Приложению нужен доступ к микрофону для записи голосовых сообщений в чате</string>
+    </config-file>
+    <edit-config file="*-Info.plist" mode="merge" target="NSAppTransportSecurity">
+        <dict>
+            <key>NSAllowsArbitraryLoads</key>
+            <key>NSAllowsArbitraryLoadsInWebContent</key>
+            <key>NSAllowsLocalNetworking</key>
+            <true />
+        </dict>
+    </edit-config>
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+    <preference name="MediaPermissionGrantType" value="grantIfSameHostElsePrompt" />
+    <preference name="MediaTypesRequiringUserActionForPlayback" value="all" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SuppressesLongPressGesture" value="false" />
+    <preference name="Suppresses3DTouchGesture" value="false" />
+    <preference name="KeepAVAudioSessionAlwaysActive" value="NO" />
+    <preference name="LoadUrlTimeoutValue" value="700000" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="StatusBarBackgroundColor" value="#fff" />
+    <preference name="ShowSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="400" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreenBackgroundColor" value="#fff" />
+    <preference name="WKWebViewOnly" value="true" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="allowsInlineMediaPlayback" value="true" />
+    <preference name="MediaPlaybackAllowsInline" value="true" />
+    <preference name="AllowNewWindows" value="true" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="AllowsAirPlayForMediaPlayback" value="true" />
+    <preference name="LimitsNavigationsToAppBoundDomains" value="false" />
+    <preference name="PreferredContentMode" value="mobile" />
+    <preference name="AllowUntrustedCerts" value="true" />
+    <preference name="InspectableWebview" value="false" />
+    <preference name="deployment-target" value="15.0" />
+    <preference name="InAppBrowserStatusBarStyle" value="lightcontent" />
+</widget>

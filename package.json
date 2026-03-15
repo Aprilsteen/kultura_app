@@ -13,12 +13,12 @@
   "author": "KulturaDoma",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^14.0.1",
-    "cordova-plugin-advanced-http": "^3.3.1",
+    "cordova-ios": "^8.0.1",
     "cordova-plugin-android-permissions": "^1.1.5",
     "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-inappbrowser": "^6.0.0",
     "cordova-plugin-media": "^7.0.0",
+    "cordova-plugin-media-capture": "^6.0.0",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-push": "^0.0.1",
     "cordova-plugin-push-notification": "^2.5.2",
@@ -28,12 +28,9 @@
   },
   "cordova": {
     "platforms": [
-      "android"
+      "ios"
     ],
     "plugins": {
-      "cordova-plugin-advanced-http": {
-        "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
-      },
       "cordova-plugin-device": {},
       "cordova-plugin-network-information": {},
       "cordova-plugin-statusbar": {},
@@ -41,7 +38,8 @@
       "cordova-plugin-file": {},
       "cordova-plugin-media": {},
       "cordova-plugin-android-permissions": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-media-capture": {}
     }
   },
   "dependencies": {

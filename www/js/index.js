@@ -28,9 +28,21 @@ let openAppWindow = () => {
         if (navigator.onLine/* && navigator.connection.type !== Connection.CELL_2G*/) {
             document.body.className = 'mode-online';
 
-            const options = 'location=no,toolbar=no,hideurlbar=yes,hidenavigationbuttons=yes,lefttoright=yes,zoom=no,mediaPlaybackRequiresUserAction=no';
-            siteWindow = cordova.InAppBrowser.open('https://kultura-doma.ru/?source=app&version=1.0.3&version_app='+cordova.platformId, '_blank', options)
+            //const options = 'location=no,toolbar=no,hideurlbar=yes,hidenavigationbuttons=yes,lefttoright=yes,zoom=no,mediaPlaybackRequiresUserAction=no';
+            //siteWindow = cordova.InAppBrowser.open('https://kultura-doma.ru/?source=app&version=1.0.4&version_app='+cordova.platformId, '_target', options)
 
+            const options = 'location=yes';
+            var url = 'https://kultura-doma.ru/?source=app&version=1.0.4&version_app='+cordova.platformId;
+            console.log('URL', url);
+
+            window.location.href = url;
+            document.body.classList.add('site-loaded');
+
+            //siteWindow = cordova.InAppBrowser.open(url, '_target', options);
+            //window.open(url, '_system');
+            //window.location.href = url;
+
+            /*
             siteWindow.addEventListener('loaderror', function (params) {
                 console.log('ERROR', params.message)
                 errorWithFirstConnectOrOpenUrl()
@@ -39,14 +51,23 @@ let openAppWindow = () => {
             })
 
             siteWindow.addEventListener('loadstop', function () {
-                if (payloadWait !== '') {
-                    let tmp = payloadWait
-                    payloadWait = ''
-                    /*siteWindow.executeScript({
-                            code: "loadPushId('" + tmp + "')"
-                        }
-                    );*/
-                }
+                console.log('loadstop');
+
+                // ПОЛНОСТЬЮ ПРЯЧЕМ ИНТЕРФЕЙС ПРИЛОЖЕНИЯ
+                document.body.style.display = 'none';
+                document.documentElement.style.overflow = 'hidden';
+                
+                // Если есть какие-то контейнеры с вашим дизайном — тоже прячем
+                var wrapper = document.querySelector('.wrapper-offline');
+                if (wrapper) wrapper.style.display = 'none';
+                
+                // Принудительно показываем браузер
+                setTimeout(function() {
+                    if (siteWindow) {
+                        siteWindow.show();
+                        console.log('Browser shown after delay');
+                    }
+                }, 300);
             })
 
             siteWindow.addEventListener('message', (params) => {
@@ -62,7 +83,8 @@ let openAppWindow = () => {
                 }
 
                 console.log(params.data.type)
-            })
+            })*/
+
         } else {
             errorWithFirstConnectOrOpenUrl()
         }
@@ -85,13 +107,6 @@ document.addEventListener("online", () => {
     document.body.className = 'mode-online';
     // openAppWindow()
 }, false);
-
-/*
-function onDeviceReady() {
-    document.body.className = 'mode-online';
-    openAppWindow()
-}
-*/
 
 function onDeviceReady() {
     document.body.className = 'mode-online';

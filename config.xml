@@ -74,8 +74,8 @@
         </edit-config>
         <preference name="PreferredContentMode" value="mobile" />
         <preference name="AllowUntrustedCerts" value="true" />
-        <preference name="StatusBarOverlaysWebView" value="false" />
         <preference name="InspectableWebview" value="false" />
+        <preference name="deployment-target" value="15.0" />
     </platform>
     <platform name="browser">
         <preference name="AutoHideSplashScreen" value="true" />
